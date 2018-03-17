@@ -1,10 +1,10 @@
 {
   "name": "gsnova",
   "description": "deploy gsnova to Heroku.",
-  "keywords": ["V2ray"],
+  "keywords": ["gsnova"],
   "env": {
     "VER": {
-       "description": "输入 gsnova 版本",
+       "description": "设置 gsnova 版本",
        "value": "0.32.0"
     }, 
     "Window": {
