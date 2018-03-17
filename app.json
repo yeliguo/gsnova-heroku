@@ -1,0 +1,23 @@
+{
+  "name": "gsnova",
+  "description": "deploy gsnova to Heroku.",
+  "keywords": ["V2ray"],
+  "env": {
+    "VER": {
+       "description": "输入 gsnova 版本",
+       "value": "0.32.0"
+    }, 
+    "Window": {
+       "description": "设置 MaxStreamWindow",
+       "value": "521k"
+    },
+    "Window_Refresh": {
+       "description": "设置 StreamMinRefresh",
+       "value": "32k"
+    }
+    
+  },
+  "website": "https://github.com/wangyi2005/gsnova-heroku",
+  "repository": "https://github.com/wangyi2005/gsnova-heroku",
+  "stack": "container"
+ }
