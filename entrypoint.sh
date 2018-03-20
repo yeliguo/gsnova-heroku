@@ -1,5 +1,6 @@
 cd /gsnova
-if [[  "$VER" > "0.31.0" ]]; then 
+if [[  "$VER" > "0.31.0" ]]
+then 
    wget -O gsnova.tar.bz2 http://github.com/yinqiwen/gsnova/releases/download/$VER/gsnova_linux_amd64-$VER.tar.bz2 
    tar -xjvf gsnova.tar.bz2
    chmod +x gsnova 
