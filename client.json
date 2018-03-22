@@ -27,26 +27,24 @@
           ]
      }
      ],
-	"Channel":[
-		{
-		  "Enable":true,
-			"Name":"Default",
-			"ServerList":["wss://########.herokuapp.com"],
-			"SNIProxy": "",
-	                "Proxy":"",
-		        "ConnsPerServer":3,
-			"RemoteDialMSTimeout":5000,
-			"RemoteDNSReadMSTimeout":1500,
-			"RemoteUDPReadMSTimeout":15000,
-			"LocalDialMSTimeout":5000,
-		        "ReconnectPeriod": 1800,
-		        "RCPRandomAdjustment" : 10,
-			"HeartBeatPeriod": 30,
-			"Compressor":"none",
-			"Hops":[],
-			"RemoteSNIProxy":{
-				//"*.google.*":"GoogleHKSNI"
-			}
-		}
-	]
+     "Channel":[
+     {
+	"Enable":true,
+	"Name":"Default",
+	"ServerList":["wss://########.herokuapp.com"],
+	"SNIProxy": "",
+	"Proxy":"",
+	"ConnsPerServer":3,
+	"RemoteDialMSTimeout":5000,
+	"RemoteDNSReadMSTimeout":1500,
+	"RemoteUDPReadMSTimeout":15000,
+	"LocalDialMSTimeout":5000,
+	"ReconnectPeriod": 1800,
+        "RCPRandomAdjustment" : 10,
+	"HeartBeatPeriod": 30,
+	"Compressor":"none",
+	"Hops":[],
+	"RemoteSNIProxy":{}
+     }
+     ]
 }
