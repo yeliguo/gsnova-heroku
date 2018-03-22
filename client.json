@@ -9,13 +9,12 @@
     "LocalDNS":{
     	"Listen": "127.0.0.1:5300",
     	"FastDNS":["223.5.5.5","180.76.76.76"],
-    	//"TrustedDNS": ["208.67.222.222", "208.67.220.220"],
-		"TrustedDNS": ["114.114.114.114", "202.102.192.68"]
+    	"TrustedDNS": ["114.114.114.114", "202.102.192.68"]
 	},
     "Admin":{
  		"Listen": ":7788",
 		"BroadcastAddr":"224.0.0.1:48100",
-    	"ConfigDir":"./android"
+    	        "ConfigDir":"./android"
     },
 	"Proxy":[
 		{
@@ -23,14 +22,7 @@
 			"Transparent": false,
 			"PAC":[
 				{"Protocol":["dns", "udp"],"Remote":"direct"},
-				// Support rules 'IsCNIP/InHosts/BlockedByGFW'
-				//{"Rule":["InHosts"],"Remote":"direct"},
 				{"Rule":["IsCNIP"],"Remote":"direct"},
-				//{"Rule":["BlockedByGFW"],"Remote":"heroku"},
-				//{"Host":["*notexist_domain.com"],"Remote":"Reject"},
-				//{"Host":["*"],"Remote":"direct"},
-				//{"URL":["*"],"Remote":"direct"},
-				//{"Method":["CONNECT"],"Remote":"direct"}
 				{"Remote":"Default"}
 			]
 		}
@@ -41,18 +33,17 @@
 			"Name":"Default",
 			"ServerList":["wss://########.herokuapp.com"],
 			"SNIProxy": "",
-	    "Proxy":"",
-		  "ConnsPerServer":3,
+	                "Proxy":"",
+		        "ConnsPerServer":3,
 			"RemoteDialMSTimeout":5000,
 			"RemoteDNSReadMSTimeout":1500,
 			"RemoteUDPReadMSTimeout":15000,
 			"LocalDialMSTimeout":5000,
-		  "ReconnectPeriod": 1800,
-		  "RCPRandomAdjustment" : 10,
+		        "ReconnectPeriod": 1800,
+		        "RCPRandomAdjustment" : 10,
 			"HeartBeatPeriod": 30,
 			"Compressor":"none",
 			"Hops":[],
-			//Use matched RemoteSNI host to connect at remote side
 			"RemoteSNIProxy":{
 				//"*.google.*":"GoogleHKSNI"
 			}
