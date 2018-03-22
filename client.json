@@ -1,0 +1,61 @@
+{
+	"Log": ["color"],
+	"UserAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36",
+	"Cipher":{"Method":"auto", "Key":"809240d3a021449f6e67aa73221d42df942a308a", "User": "gsnova"},
+	"Mux":{
+		"MaxStreamWindow": "512K",
+		"StreamMinRefresh":"32K"
+	},
+    "LocalDNS":{
+    	"Listen": "127.0.0.1:5300",
+    	"FastDNS":["223.5.5.5","180.76.76.76"],
+    	//"TrustedDNS": ["208.67.222.222", "208.67.220.220"],
+		"TrustedDNS": ["114.114.114.114", "202.102.192.68"]
+	},
+    "Admin":{
+ 		"Listen": ":7788",
+		"BroadcastAddr":"224.0.0.1:48100",
+    	"ConfigDir":"./android"
+    },
+	"Proxy":[
+		{
+			"Local": ":1080",
+			"Transparent": false,
+			"PAC":[
+				{"Protocol":["dns", "udp"],"Remote":"direct"},
+				// Support rules 'IsCNIP/InHosts/BlockedByGFW'
+				//{"Rule":["InHosts"],"Remote":"direct"},
+				{"Rule":["IsCNIP"],"Remote":"direct"},
+				//{"Rule":["BlockedByGFW"],"Remote":"heroku"},
+				//{"Host":["*notexist_domain.com"],"Remote":"Reject"},
+				//{"Host":["*"],"Remote":"direct"},
+				//{"URL":["*"],"Remote":"direct"},
+				//{"Method":["CONNECT"],"Remote":"direct"}
+				{"Remote":"Default"}
+			]
+		}
+	],
+	"Channel":[
+		{
+		  "Enable":true,
+			"Name":"Default",
+			"ServerList":["wss://########.herokuapp.com"],
+			"SNIProxy": "",
+	    "Proxy":"",
+		  "ConnsPerServer":3,
+			"RemoteDialMSTimeout":5000,
+			"RemoteDNSReadMSTimeout":1500,
+			"RemoteUDPReadMSTimeout":15000,
+			"LocalDialMSTimeout":5000,
+		  "ReconnectPeriod": 1800,
+		  "RCPRandomAdjustment" : 10,
+			"HeartBeatPeriod": 30,
+			"Compressor":"none",
+			"Hops":[],
+			//Use matched RemoteSNI host to connect at remote side
+			"RemoteSNIProxy":{
+				//"*.google.*":"GoogleHKSNI"
+			}
+		}
+	]
+}
